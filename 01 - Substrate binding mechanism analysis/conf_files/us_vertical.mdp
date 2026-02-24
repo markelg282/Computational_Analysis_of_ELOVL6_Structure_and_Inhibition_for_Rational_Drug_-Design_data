@@ -1,0 +1,83 @@
+title       = Umbrella Sampling Production
+
+; RUN CONTROL
+;----------------------------------------------------
+integrator   = sd            ; stochastic leap-frog integrator
+nsteps       = 27500000      ; 2 * 12,500,000 fs = 25 ns
+dt           = 0.002         ; 2 fs
+nstcomm      = 100           ; frequency for center of mass motion removal
+
+; OUTPUT CONTROL
+;----------------------------------------------------
+nstxout                = 0         ; do not save coordinates to .trr
+nstvout                = 0         ; do not save velocities to .trr
+nstfout                = 0         ; do not save forces to .trr
+nstxout-compressed     = 50000     ; xtc compressed trajectory output every 100 ps
+compressed-x-precision = 1000      ; precision with which to write to the compressed trajectory file
+nstlog                 = 10000     ; update log file every 20 ps
+nstenergy              = 10000     ; save energies every 20 ps
+nstcalcenergy          = 100       ; calculate energies every 100 steps (default=100)
+
+; BONDS
+;----------------------------------------------------
+constraint_algorithm   = lincs      ; holonomic constraints
+constraints            = h-bonds    ; constrain H-bonds
+lincs-iter             = 2          ; accuracy of LINCS (1 is default)
+lincs-order            = 6          ; also related to accuracy (4 is default)
+lincs-warnangle        = 30         ; maximum angle that a bond can rotate before LINCS will complain (30 is default)
+
+; NEIGHBOR SEARCHING
+;----------------------------------------------------
+cutoff-scheme         = Verlet ; group or Verlet
+ns-type               = grid   ; search neighboring grid cells
+nstlist               = 20     ; 20 fs (default is 10)
+rlist                 = 0.9    ; short-range neighborlist cutoff (in nm)
+pbc                   = xyz    ; 3D PBC
+
+; ELECTROSTATICS & EWALD
+;----------------------------------------------------
+coulombtype     = PME
+fourierspacing  = 0.12
+fourier_nx      = 0
+fourier_ny      = 0
+fourier_nz      = 0
+pme_order       = 4
+ewald_rtol      = 1e-5
+optimize_fft    = yes
+
+; VAN DER WAALS
+;----------------------------------------------------
+vdw-type          = Cut-off                    ; potential switched off at rvdw-switch to reach zero at rvdw
+vdw-modifier      = Potential-shift-Verlet
+rvdw              = 1.0                        ; van der Waals cutoff (in nm)
+DispCorr          = EnerPres                   ; apply analytical long range dispersion corrections for Energy and Pressure
+
+; TEMPERATURE COUPLING (Langevin)
+;----------------------------------------------------
+tc-grps           = Water_and_ions       SOLU  ; two coupling groups - more accurate
+tau_t             = 1.0                  1.0   ; time constant, in ps
+ref_t             = 300                  300   ; reference temperature, one for each group, in Kgen_vel     = no
+
+; PRESSURE COUPLING
+;----------------------------------------------------
+Pcoupl            = Parrinello-Rahman 
+pcoupltype        = isotropic
+tau_p             = 2.0       
+compressibility   = 4.5e-5
+ref_p             = 1.0
+refcoord_scaling  = com
+
+; PULLING
+;----------------------------------------------------
+pull                    = yes
+pull_ncoords            = 1                    ; only one reaction coordinate 
+pull_ngroups            = 2                    ; two groups defining one reaction coordinate 
+pull_group1_name        = GroupA
+pull_group2_name        = GroupB
+pull_coord1_type        = umbrella             ; harmonic potential
+pull_coord1_geometry    = distance             ; simple distance increase 
+pull_coord1_dim         = N N Y
+pull_coord1_groups      = 1 2
+pull_coord1_start       = yes                  ; define initial COM distance > 0
+pull_coord1_rate        = 0.0                  ; 0.01 nm per ps = 10 nm per ns
+pull_coord1_k           = 1000                 ; kJ mol^-1 nm^-2
