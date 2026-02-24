@@ -1,0 +1,72 @@
+options:
+  minimize: yes
+  verbose: yes
+  temperature: 300 * kelvin
+  pressure: 1 * atmosphere
+  hydrogen_mass: 3.0 * amu
+  number_of_equilibration_iterations: 100
+  default_number_of_iterations: 30000
+  constraints: HBonds
+  platform: CUDA
+  output_dir: model_ligand_2
+
+mcmc_moves:
+    langevin:
+        type: LangevinSplittingDynamicsMove
+        timestep: 4.0 * femtosecond
+        collision_rate: 1.0 / picosecond
+        reassign_velocities: yes
+        splitting: 'V R O R V'
+        n_steps: 500
+        n_restart_attempts: 4
+
+samplers:
+    sams:
+        type: ReplicaExchangeSampler
+        mcmc_moves: langevin
+
+molecules:
+  elovl6:
+    filepath: protein_fixed.pdb
+  model_ligand:
+    filepath: model_ligand_2.mol2
+    antechamber:
+      charge_method: bcc
+
+solvents:
+  water:
+    solvent_model: tip3p
+    nonbonded_method: PME
+    nonbonded_cutoff: 9 * angstroms
+    rigid_water: True
+    clearance: 10 * angstroms
+    positive_ion: K+
+    negative_ion: Cl-
+    ionic_strength: 150 * millimolar
+
+systems:
+  model_sys:
+    receptor: elovl6
+    ligand: model_ligand
+    solvent: water
+    leap:
+      parameters: [leaprc.protein.ff14SB, leaprc.gaff2, leaprc.water.tip3p]
+
+protocols:
+  absolute-binding:
+    complex:
+      alchemical_path:
+        lambda_electrostatics: [1.00, 1.00, 1.000, 1.00, 1.000, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 0.90, 0.80, 0.70, 0.60, 0.50, 0.40, 0.30, 0.20, 0.10, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00]
+        lambda_sterics:        [1.00, 1.00, 1.000, 1.00, 1.000, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 0.95, 0.90, 0.85, 0.80, 0.75, 0.70, 0.65, 0.60, 0.55, 0.50, 0.45, 0.40, 0.35, 0.30, 0.25, 0.20, 0.15, 0.10, 0.05, 0.00]
+        lambda_restraints:     [0.00, 0.01, 0.025, 0.05, 0.075, 0.10, 0.15, 0.20, 0.30, 0.50, 0.75, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00]
+    solvent:
+      alchemical_path:
+        lambda_electrostatics: [1.00, 0.90, 0.80, 0.70, 0.60, 0.50, 0.40, 0.30, 0.20, 0.10, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00]
+        lambda_sterics:        [1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 0.90, 0.80, 0.75, 0.70, 0.65, 0.60, 0.55, 0.50, 0.45, 0.40, 0.35, 0.30, 0.25, 0.20, 0.15, 0.10, 0.05, 0.00]
+
+# Here we combine the system and the protocol to make an experiment
+experiments:
+  system: model_sys
+  protocol: absolute-binding
+  restraint:
+    type: Boresch

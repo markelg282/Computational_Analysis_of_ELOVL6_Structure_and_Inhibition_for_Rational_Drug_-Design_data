@@ -1,0 +1,263 @@
+Actives_LigPrep.smi:27
+                    3D
+ Schrodinger Suite 2024-1.
+ 55 58  0  0  1  0            999 V2000
+   22.4752   49.0832   19.0833 C   0  0  0  0  0  0
+   23.4170   48.3680   20.0566 C   0  0  0  0  0  0
+   23.1154   48.8335   21.4858 C   0  0  0  0  0  0
+   24.7269   48.7335   19.6380 O   0  0  0  0  0  0
+   25.8341   48.2374   20.2886 C   0  0  0  0  0  0
+   25.8383   47.1243   21.1687 C   0  0  0  0  0  0
+   27.0275   46.7417   21.8285 C   0  0  0  0  0  0
+   28.2266   47.4616   21.6008 C   0  0  0  0  0  0
+   29.4688   47.1720   22.2144 N   0  0  0  0  0  0
+   29.7280   46.6703   23.4329 C   0  0  0  0  0  0
+   28.8849   46.1185   24.1369 O   0  0  0  0  0  0
+   31.2026   46.7678   23.8995 C   0  0  2  0  0  0
+   31.3766   46.6921   25.4478 C   0  0  0  0  0  0
+   32.2795   47.8402   25.9457 C   0  0  2  0  0  0
+   31.5919   49.1830   25.6166 C   0  0  0  0  0  0
+   31.4043   49.3122   24.0843 C   0  0  0  0  0  0
+   31.9458   48.0419   23.3781 C   0  0  1  0  0  0
+   33.3748   47.9333   23.7409 N   0  0  0  0  0  0
+   34.6201   48.5110   22.6713 S   0  0  0  0  0  0
+   33.9814   49.0953   21.4812 O   0  0  0  0  0  0
+   35.5903   49.2797   23.4634 O   0  0  0  0  0  0
+   35.4532   47.0528   22.1325 C   0  0  0  0  0  0
+   36.1796   47.0761   20.9055 C   0  0  0  0  0  0
+   36.7686   45.8690   20.6328 C   0  0  0  0  0  0
+   36.4431   44.6921   21.8825 S   0  0  0  0  0  0
+   35.4797   45.8401   22.7681 C   0  0  0  0  0  0
+   33.6287   47.7819   25.1924 C   0  0  0  0  0  0
+   28.2268   48.5305   20.6843 C   0  0  0  0  0  0
+   27.0422   48.9143   20.0389 C   0  0  0  0  0  0
+   21.4322   48.9015   19.3252 H   0  0  0  0  0  0
+   22.6285   48.7378   18.0634 H   0  0  0  0  0  0
+   22.6324   50.1622   19.0975 H   0  0  0  0  0  0
+   23.2710   47.2912   19.9644 H   0  0  0  0  0  0
+   22.0630   48.6927   21.7301 H   0  0  0  0  0  0
+   23.6915   48.2924   22.2328 H   0  0  0  0  0  0
+   23.3364   49.8921   21.5950 H   0  0  0  0  0  0
+   24.9367   46.5607   21.3605 H   0  0  0  0  0  0
+   27.0065   45.8995   22.5025 H   0  0  0  0  0  0
+   30.2642   47.5775   21.7468 H   0  0  0  0  0  0
+   31.7026   45.8921   23.4850 H   0  0  0  0  0  0
+   30.4276   46.7365   25.9850 H   0  0  0  0  0  0
+   31.8314   45.7388   25.7128 H   0  0  0  0  0  0
+   32.4436   47.7567   27.0204 H   0  0  0  0  0  0
+   30.6313   49.2406   26.1259 H   0  0  0  0  0  0
+   32.1870   50.0171   25.9913 H   0  0  0  0  0  0
+   31.9345   50.1920   23.7174 H   0  0  0  0  0  0
+   30.3522   49.4722   23.8449 H   0  0  0  0  0  0
+   31.8585   48.1338   22.2972 H   0  0  0  0  0  0
+   36.2414   47.9575   20.2834 H   0  0  0  0  0  0
+   37.3721   45.5971   19.7792 H   0  0  0  0  0  0
+   35.0091   45.5571   23.6953 H   0  0  0  0  0  0
+   34.2829   48.5836   25.5395 H   0  0  0  0  0  0
+   34.1465   46.8428   25.3821 H   0  0  0  0  0  0
+   29.1362   49.0814   20.4855 H   0  0  0  0  0  0
+   27.0513   49.7526   19.3564 H   0  0  0  0  0  0
+  1  2  1  0  0  0
+  1 30  1  0  0  0
+  1 31  1  0  0  0
+  1 32  1  0  0  0
+  2  3  1  0  0  0
+  2  4  1  0  0  0
+  2 33  1  0  0  0
+  3 34  1  0  0  0
+  3 35  1  0  0  0
+  3 36  1  0  0  0
+  4  5  1  0  0  0
+  5  6  2  0  0  0
+  5 29  1  0  0  0
+  6  7  1  0  0  0
+  6 37  1  0  0  0
+  7  8  2  0  0  0
+  7 38  1  0  0  0
+  8  9  1  0  0  0
+  8 28  1  0  0  0
+  9 10  1  0  0  0
+  9 39  1  0  0  0
+ 10 11  2  0  0  0
+ 10 12  1  0  0  0
+ 12 13  1  0  0  0
+ 12 17  1  0  0  0
+ 12 40  1  0  0  0
+ 13 14  1  0  0  0
+ 13 41  1  0  0  0
+ 13 42  1  0  0  0
+ 14 15  1  0  0  0
+ 14 27  1  0  0  0
+ 14 43  1  0  0  0
+ 15 16  1  0  0  0
+ 15 44  1  0  0  0
+ 15 45  1  0  0  0
+ 16 17  1  0  0  0
+ 16 46  1  0  0  0
+ 16 47  1  0  0  0
+ 17 18  1  0  0  0
+ 17 48  1  0  0  0
+ 18 19  1  0  0  0
+ 18 27  1  0  0  0
+ 19 20  2  0  0  0
+ 19 21  2  0  0  0
+ 19 22  1  0  0  0
+ 22 23  1  0  0  0
+ 22 26  2  0  0  0
+ 23 24  2  0  0  0
+ 23 49  1  0  0  0
+ 24 25  1  0  0  0
+ 24 50  1  0  0  0
+ 25 26  1  0  0  0
+ 26 51  1  0  0  0
+ 27 52  1  0  0  0
+ 27 53  1  0  0  0
+ 28 29  2  0  0  0
+ 28 54  1  0  0  0
+ 29 55  1  0  0  0
+M  END
+> <i_epik_Tot_Q>
+0
+
+> <i_epik_Tot_abs_Q>
+0
+
+> <i_i_glide_confnum>
+68
+
+> <i_i_glide_lignum>
+1
+
+> <i_i_glide_posenum>
+104
+
+> <i_i_glide_rotatable_bonds>
+7
+
+> <i_lp_mmshare_version>
+65132
+
+> <i_m_source_file_index>
+27
+
+> <i_f3d_flags>
+0
+
+> <b_lp_Chiralities_Consistent>
+1
+
+> <b_m_subgroup_collapsed>
+0
+
+> <r_epik_Charging_Adjusted_Penalty>
+0
+
+> <r_epik_Ionization_Penalty>
+0.0001
+
+> <r_epik_Ionization_Penalty_Charging>
+0
+
+> <r_epik_Ionization_Penalty_Neutral>
+0.0001
+
+> <r_epik_State_Penalty>
+0
+
+> <r_i_docking_score>
+-4.46589
+
+> <r_i_glide_ecoul>
+2.13556
+
+> <r_i_glide_eff_state_penalty>
+0
+
+> <r_i_glide_einternal>
+6.17274
+
+> <r_i_glide_emodel>
+-42.1543
+
+> <r_i_glide_energy>
+-37.9727
+
+> <r_i_glide_erotb>
+0.632769
+
+> <r_i_glide_esite>
+0
+
+> <r_i_glide_evdw>
+-40.1083
+
+> <r_i_glide_gscore>
+-4.46589
+
+> <r_i_glide_hbond>
+0
+
+> <r_i_glide_ligand_efficiency>
+-0.153996
+
+> <r_i_glide_ligand_efficiency_ln>
+-1.02258
+
+> <r_i_glide_ligand_efficiency_sa>
+-0.473125
+
+> <r_i_glide_lipo>
+-3.39578
+
+> <r_i_glide_metal>
+0
+
+> <r_i_glide_rewards>
+-0.0177955
+
+> <r_lp_Energy>
+49.2626
+
+> <r_lp_tautomer_probability>
+1
+
+> <s_epik_cmdline>
+J2VwaWtfcHl0aG9uJywgJy1waCcsICc3LjAnLCAnLXRuJywgJzgnLCAnLW1hJywgJzUwMCcsICctaW1hZScsICc8aW5maWxlLm1hZT4nLCAnLW9tYWUnLCAnPG91dGZpbGUubWFlPic=
+
+> <s_epik_input>
+W0NIM11bQ0hdKFtDSDNdKU9jMVtjSF1bY0hdYyhbY0hdW2NIXTEpW05IXUMoPU8pW0NASF0oW0NIMl1bQ0BIXTIzKVtDQEBIXShbQ0gyXVtDSDJdMilOKFtDSDJdMylTKD1PKSg9TyljNFtjSF1bY0hdc1tjSF00
+
+> <s_i_glide_gridfile>
+Alt_Grid
+
+> <s_lp_Force_Field>
+S-OPLS
+
+> <s_lp_Variant>
+Actives_LigPrep.smi:27-1
+
+> <s_m_Source_File>
+Alt_Alternative_Ligand_Docking_pv.maegz
+
+> <s_m_Source_Path>
+/home/markelg282/ELOVL6/Virtual_Screen/Alt_Alternative_Ligand_Docking
+
+> <s_m_entry_id>
+6575
+
+> <s_m_entry_name>
+Actives_LigPrep.172
+
+> <s_m_job_name>
+Alt_Alternative_Ligand_Docking
+
+> <s_m_source_file>
+Actives_LigPrep.smi
+
+> <s_m_subgroup_title>
+Alt_Alternative_Ligand_Docking_pv
+
+> <s_m_subgroupid>
+Alt_Alternative_Ligand_Docking_pv
+
+$$$$

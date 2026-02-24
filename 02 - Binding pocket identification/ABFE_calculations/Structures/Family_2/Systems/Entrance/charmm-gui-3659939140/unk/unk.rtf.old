@@ -1,0 +1,425 @@
+* Topology File.
+* 
+   99   1
+MASS     1 c3     12.010000
+MASS     2 os     16.000000
+MASS     3 ca     12.010000
+MASS     4 ns     14.010000
+MASS     5 c      12.010000
+MASS     6 o      16.000000
+MASS     7 n3     14.010000
+MASS     8 sy     32.060000
+MASS     9 cc     12.010000
+MASS    10 cd     12.010000
+MASS    11 ss     32.060000
+MASS    12 hc      1.008000
+MASS    13 h1      1.008000
+MASS    14 ha      1.008000
+MASS    15 hn      1.008000
+MASS    16 h4      1.008000
+
+RESI MOL  0.003
+GROUP
+ATOM C1    c3     -0.110600
+ATOM C2    c3      0.141100
+ATOM C3    c3     -0.110600
+ATOM O1    os     -0.332900
+ATOM C4    ca      0.111100
+ATOM C5    ca     -0.160500
+ATOM C6    ca     -0.130500
+ATOM C7    ca      0.025600
+ATOM N1    ns     -0.469100
+ATOM C8    c       0.669100
+ATOM O2    o      -0.594100
+ATOM C9    c3     -0.150700
+ATOM C10   c3     -0.070400
+ATOM C11   c3     -0.068700
+ATOM C12   c3     -0.073400
+ATOM C13   c3     -0.090400
+ATOM C14   c3      0.249500
+ATOM N2    n3     -0.818500
+ATOM S1    sy      1.541200
+ATOM O3    o      -0.656300
+ATOM O4    o      -0.656300
+ATOM C15   cc     -0.423500
+ATOM C16   cc     -0.054000
+ATOM C17   cd     -0.200100
+ATOM S2    ss      0.116200
+ATOM C18   cd     -0.065100
+ATOM C19   c3      0.226800
+ATOM C20   ca     -0.130500
+ATOM C21   ca     -0.160500
+ATOM H1    hc      0.047860
+ATOM H2    hc      0.047860
+ATOM H3    hc      0.047860
+ATOM H4    h1      0.047700
+ATOM H5    hc      0.047860
+ATOM H6    hc      0.047860
+ATOM H7    hc      0.047860
+ATOM H8    ha      0.145000
+ATOM H9    ha      0.152000
+ATOM H10   hn      0.316500
+ATOM H11   hc      0.070700
+ATOM H12   hc      0.065200
+ATOM H13   hc      0.065200
+ATOM H14   hc      0.066700
+ATOM H15   hc      0.052200
+ATOM H16   hc      0.052200
+ATOM H17   hc      0.059700
+ATOM H18   hc      0.059700
+ATOM H19   h1      0.081700
+ATOM H20   ha      0.174000
+ATOM H21   h4      0.181000
+ATOM H22   h4      0.189000
+ATOM H23   h1      0.043200
+ATOM H24   h1      0.043200
+ATOM H25   ha      0.152000
+ATOM H26   ha      0.145000
+
+BOND C1    C2           	! dist	    1.5321
+BOND C1    H1           	! dist	    1.0697
+BOND C1    H2           	! dist	    1.0701
+BOND C1    H3           	! dist	    1.0703
+BOND C2    C3           	! dist	    1.5331
+BOND C2    O1           	! dist	    1.4230
+BOND C2    H4           	! dist	    1.0700
+BOND C3    H5           	! dist	    1.0692
+BOND C3    H6           	! dist	    1.0699
+BOND C3    H7           	! dist	    1.0703
+BOND O1    C4           	! dist	    1.3767
+BOND C4    C5           	! dist	    1.4189
+BOND C4    C21          	! dist	    1.4072
+BOND C5    C6           	! dist	    1.4121
+BOND C5    H8           	! dist	    1.0312
+BOND C6    C7           	! dist	    1.4177
+BOND C6    H9           	! dist	    1.0326
+BOND C7    N1           	! dist	    1.4151
+BOND C7    C20          	! dist	    1.4084
+BOND N1    C8           	! dist	    1.3435
+BOND N1    H10          	! dist	    0.9842
+BOND C8    O2           	! dist	    1.2292
+BOND C8    C9           	! dist	    1.5500
+BOND C9    C10          	! dist	    1.5606
+BOND C9    C14          	! dist	    1.5642
+BOND C9    H11          	! dist	    1.0693
+BOND C10   C11          	! dist	    1.5426
+BOND C10   H12          	! dist	    1.0696
+BOND C10   H13          	! dist	    1.0696
+BOND C11   C12          	! dist	    1.5440
+BOND C11   C19          	! dist	    1.5474
+BOND C11   H14          	! dist	    1.0693
+BOND C12   C13          	! dist	    1.5499
+BOND C12   H15          	! dist	    1.0703
+BOND C12   H16          	! dist	    1.0703
+BOND C13   C14          	! dist	    1.5508
+BOND C13   H17          	! dist	    1.0698
+BOND C13   H18          	! dist	    1.0696
+BOND C14   N2           	! dist	    1.4784
+BOND C14   H19          	! dist	    1.0703
+BOND N2    S1           	! dist	    1.7404
+BOND N2    C19          	! dist	    1.4808
+BOND S1    O3           	! dist	    1.4716
+BOND S1    O4           	! dist	    1.4695
+BOND S1    C15          	! dist	    1.7633
+BOND C15   C16          	! dist	    1.4272
+BOND C15   C18          	! dist	    1.3694
+BOND C16   C17          	! dist	    1.3703
+BOND C16   H20          	! dist	    1.0318
+BOND C17   S2           	! dist	    1.7476
+BOND C17   H21          	! dist	    1.0316
+BOND S2    C18          	! dist	    1.7403
+BOND C18   H22          	! dist	    1.0318
+BOND C19   H23          	! dist	    1.0699
+BOND C19   H24          	! dist	    1.0696
+BOND C20   C21          	! dist	    1.4025
+BOND C20   H25          	! dist	    1.0316
+BOND C21   H26          	! dist	    1.0326
+
+ANGL C1    C2    C3            	! angle	  109.2444
+ANGL C1    C2    O1            	! angle	  105.0185
+ANGL C1    C2    H4            	! angle	  113.4131
+ANGL C2    C1    H1            	! angle	  109.4517
+ANGL C2    C1    H2            	! angle	  109.4733
+ANGL C2    C1    H3            	! angle	  109.4284
+ANGL C2    C3    H5            	! angle	  109.4789
+ANGL C2    C3    H6            	! angle	  109.4063
+ANGL C2    C3    H7            	! angle	  109.4741
+ANGL C2    O1    C4            	! angle	  120.5710
+ANGL C3    C2    O1            	! angle	  112.1997
+ANGL C3    C2    H4            	! angle	  106.5031
+ANGL O1    C2    H4            	! angle	  110.5770
+ANGL O1    C4    C5            	! angle	  125.3218
+ANGL O1    C4    C21           	! angle	  115.6548
+ANGL C4    C5    C6            	! angle	  120.2670
+ANGL C4    C5    H8            	! angle	  119.8626
+ANGL C4    C21   C20           	! angle	  120.8142
+ANGL C4    C21   H26           	! angle	  119.6475
+ANGL C5    C4    C21           	! angle	  119.0234
+ANGL C5    C6    C7            	! angle	  120.0400
+ANGL C5    C6    H9            	! angle	  120.0150
+ANGL C6    C5    H8            	! angle	  119.8703
+ANGL C6    C7    N1            	! angle	  124.7130
+ANGL C6    C7    C20           	! angle	  119.3219
+ANGL C7    C6    H9            	! angle	  119.9450
+ANGL C7    N1    C8            	! angle	  129.7036
+ANGL C7    N1    H10           	! angle	  115.1334
+ANGL C7    C20   C21           	! angle	  120.4449
+ANGL C7    C20   H25           	! angle	  119.7231
+ANGL N1    C7    C20           	! angle	  115.9504
+ANGL N1    C8    O2            	! angle	  123.7263
+ANGL N1    C8    C9            	! angle	  115.6337
+ANGL C8    N1    H10           	! angle	  115.1630
+ANGL C8    C9    C10           	! angle	  113.6684
+ANGL C8    C9    C14           	! angle	  113.7909
+ANGL C8    C9    H11           	! angle	  102.9870
+ANGL O2    C8    C9            	! angle	  120.5865
+ANGL C9    C10   C11           	! angle	  110.4502
+ANGL C9    C10   H12           	! angle	  109.2392
+ANGL C9    C10   H13           	! angle	  108.8755
+ANGL C9    C14   C13           	! angle	  110.4479
+ANGL C9    C14   N2            	! angle	  108.5002
+ANGL C9    C14   H19           	! angle	  108.5256
+ANGL C10   C9    C14           	! angle	  108.5007
+ANGL C10   C9    H11           	! angle	  108.7967
+ANGL C10   C11   C12           	! angle	  108.5642
+ANGL C10   C11   C19           	! angle	  108.9623
+ANGL C10   C11   H14           	! angle	  110.1454
+ANGL C11   C10   H12           	! angle	  109.2667
+ANGL C11   C10   H13           	! angle	  108.8802
+ANGL C11   C12   C13           	! angle	  109.7028
+ANGL C11   C12   H15           	! angle	  109.4394
+ANGL C11   C12   H16           	! angle	  109.3374
+ANGL C11   C19   N2            	! angle	  108.9051
+ANGL C11   C19   H23           	! angle	  109.5583
+ANGL C11   C19   H24           	! angle	  109.7732
+ANGL C12   C11   C19           	! angle	  108.4798
+ANGL C12   C11   H14           	! angle	  110.5402
+ANGL C12   C13   C14           	! angle	  109.8605
+ANGL C12   C13   H17           	! angle	  109.3570
+ANGL C12   C13   H18           	! angle	  109.2687
+ANGL C13   C12   H15           	! angle	  109.4132
+ANGL C13   C12   H16           	! angle	  109.3028
+ANGL C13   C14   N2            	! angle	  106.6431
+ANGL C13   C14   H19           	! angle	  110.4120
+ANGL C14   C9    H11           	! angle	  108.8055
+ANGL C14   C13   H17           	! angle	  109.3560
+ANGL C14   C13   H18           	! angle	  109.2671
+ANGL C14   N2    S1            	! angle	  121.0646
+ANGL C14   N2    C19           	! angle	  114.4509
+ANGL N2    C14   H19           	! angle	  112.2953
+ANGL N2    S1    O3            	! angle	  108.5625
+ANGL N2    S1    O4            	! angle	  108.3385
+ANGL N2    S1    C15           	! angle	  104.5320
+ANGL N2    C19   H23           	! angle	  109.6347
+ANGL N2    C19   H24           	! angle	  109.8680
+ANGL S1    N2    C19           	! angle	  120.9036
+ANGL S1    C15   C16           	! angle	  119.3296
+ANGL S1    C15   C18           	! angle	  126.8883
+ANGL O3    S1    O4            	! angle	  120.9828
+ANGL O3    S1    C15           	! angle	  106.6519
+ANGL O4    S1    C15           	! angle	  106.5774
+ANGL C15   C16   C17           	! angle	  112.0572
+ANGL C15   C16   H20           	! angle	  123.8925
+ANGL C15   C18   S2            	! angle	  111.0645
+ANGL C15   C18   H22           	! angle	  124.4521
+ANGL C16   C15   C18           	! angle	  113.7781
+ANGL C16   C17   S2            	! angle	  111.7817
+ANGL C16   C17   H21           	! angle	  124.1081
+ANGL C17   C16   H20           	! angle	  124.0503
+ANGL C17   S2    C18           	! angle	   91.2999
+ANGL S2    C17   H21           	! angle	  124.1101
+ANGL S2    C18   H22           	! angle	  124.4833
+ANGL C19   C11   H14           	! angle	  110.1018
+ANGL C20   C21   H26           	! angle	  119.5383
+ANGL C21   C20   H25           	! angle	  119.8320
+ANGL H1    C1    H2            	! angle	  109.5121
+ANGL H1    C1    H3            	! angle	  109.4623
+ANGL H2    C1    H3            	! angle	  109.4994
+ANGL H5    C3    H6            	! angle	  109.4808
+ANGL H5    C3    H7            	! angle	  109.5288
+ANGL H6    C3    H7            	! angle	  109.4583
+ANGL H12   C10   H13           	! angle	  110.1198
+ANGL H15   C12   H16           	! angle	  109.6321
+ANGL H17   C13   H18           	! angle	  109.7188
+ANGL H23   C19   H24           	! angle	  109.0894
+
+DIHE H1    C1    C2    C3   	! dihe	  -59.4746
+DIHE H2    C1    C2    C3   	! dihe	 -179.5140
+DIHE H3    C1    C2    C3   	! dihe	   60.4764
+DIHE H1    C1    C2    O1   	! dihe	  179.9936
+DIHE H2    C1    C2    O1   	! dihe	   59.9542
+DIHE H3    C1    C2    O1   	! dihe	  -60.0554
+DIHE H1    C1    C2    H4   	! dihe	   59.1484
+DIHE H2    C1    C2    H4   	! dihe	  -60.8910
+DIHE H3    C1    C2    H4   	! dihe	  179.0994
+DIHE C1    C2    C3    H5   	! dihe	  -57.1755
+DIHE O1    C2    C3    H5   	! dihe	   58.8588
+DIHE H4    C2    C3    H5   	! dihe	  179.9780
+DIHE C1    C2    C3    H6   	! dihe	 -177.1522
+DIHE O1    C2    C3    H6   	! dihe	  -61.1179
+DIHE H4    C2    C3    H6   	! dihe	   60.0013
+DIHE C1    C2    C3    H7   	! dihe	   62.9015
+DIHE O1    C2    C3    H7   	! dihe	  178.9358
+DIHE H4    C2    C3    H7   	! dihe	  -59.9450
+DIHE C1    C2    O1    C4   	! dihe	 -178.6925
+DIHE C3    C2    O1    C4   	! dihe	   62.7484
+DIHE H4    C2    O1    C4   	! dihe	  -55.9972
+DIHE C2    O1    C4    C5   	! dihe	   15.9988
+DIHE C2    O1    C4    C21  	! dihe	 -163.9385
+DIHE O1    C4    C5    C6   	! dihe	 -177.1402
+DIHE C21   C4    C5    C6   	! dihe	    2.7951
+DIHE O1    C4    C5    H8   	! dihe	    2.8527
+DIHE C21   C4    C5    H8   	! dihe	 -177.2119
+DIHE O1    C4    C21   C20  	! dihe	  177.6201
+DIHE C5    C4    C21   C20  	! dihe	   -2.3214
+DIHE O1    C4    C21   H26  	! dihe	   -2.3439
+DIHE C5    C4    C21   H26  	! dihe	  177.7146
+DIHE C4    C5    C6    C7   	! dihe	   -0.6845
+DIHE H8    C5    C6    C7   	! dihe	  179.3226
+DIHE C4    C5    C6    H9   	! dihe	  179.2959
+DIHE H8    C5    C6    H9   	! dihe	   -0.6970
+DIHE C5    C6    C7    N1   	! dihe	  179.5291
+DIHE H9    C6    C7    N1   	! dihe	   -0.4513
+DIHE C5    C6    C7    C20  	! dihe	   -1.9250
+DIHE H9    C6    C7    C20  	! dihe	  178.0945
+DIHE C6    C7    N1    C8   	! dihe	  -32.1160
+DIHE C20   C7    N1    C8   	! dihe	  149.2940
+DIHE C6    C7    N1    H10  	! dihe	  147.9224
+DIHE C20   C7    N1    H10  	! dihe	  -30.6676
+DIHE C6    C7    C20   C21  	! dihe	    2.4199
+DIHE N1    C7    C20   C21  	! dihe	 -178.9095
+DIHE C6    C7    C20   H25  	! dihe	 -177.5736
+DIHE N1    C7    C20   H25  	! dihe	    1.0970
+DIHE C7    N1    C8    O2   	! dihe	   15.5402
+DIHE H10   N1    C8    O2   	! dihe	 -164.4983
+DIHE C7    N1    C8    C9   	! dihe	 -167.1124
+DIHE H10   N1    C8    C9   	! dihe	   12.8491
+DIHE N1    C8    C9    C10  	! dihe	  158.1828
+DIHE O2    C8    C9    C10  	! dihe	  -24.3799
+DIHE N1    C8    C9    C14  	! dihe	   33.3021
+DIHE O2    C8    C9    C14  	! dihe	 -149.2605
+DIHE N1    C8    C9    H11  	! dihe	  -84.2928
+DIHE O2    C8    C9    H11  	! dihe	   93.1446
+DIHE C8    C9    C10   C11  	! dihe	 -130.7625
+DIHE C14   C9    C10   C11  	! dihe	   -3.0923
+DIHE H11   C9    C10   C11  	! dihe	  115.1346
+DIHE C8    C9    C10   H12  	! dihe	  109.0300
+DIHE C14   C9    C10   H12  	! dihe	 -123.2998
+DIHE H11   C9    C10   H12  	! dihe	   -5.0730
+DIHE C8    C9    C10   H13  	! dihe	  -11.2590
+DIHE C14   C9    C10   H13  	! dihe	  116.4111
+DIHE H11   C9    C10   H13  	! dihe	 -125.3620
+DIHE C8    C9    C14   C13  	! dihe	   70.5940
+DIHE C10   C9    C14   C13  	! dihe	  -57.0064
+DIHE H11   C9    C14   C13  	! dihe	 -175.2277
+DIHE C8    C9    C14   N2   	! dihe	 -172.8495
+DIHE C10   C9    C14   N2   	! dihe	   59.5502
+DIHE H11   C9    C14   N2   	! dihe	  -58.6711
+DIHE C8    C9    C14   H19  	! dihe	  -50.5709
+DIHE C10   C9    C14   H19  	! dihe	 -178.1712
+DIHE H11   C9    C14   H19  	! dihe	   63.6075
+DIHE C9    C10   C11   C12  	! dihe	   62.1669
+DIHE H12   C10   C11   C12  	! dihe	 -177.6421
+DIHE H13   C10   C11   C12  	! dihe	  -57.3338
+DIHE C9    C10   C11   C19  	! dihe	  -55.7991
+DIHE H12   C10   C11   C19  	! dihe	   64.3919
+DIHE H13   C10   C11   C19  	! dihe	 -175.2997
+DIHE C9    C10   C11   H14  	! dihe	 -176.6721
+DIHE H12   C10   C11   H14  	! dihe	  -56.4811
+DIHE H13   C10   C11   H14  	! dihe	   63.8272
+DIHE C10   C11   C12   C13  	! dihe	  -60.7818
+DIHE C19   C11   C12   C13  	! dihe	   57.4901
+DIHE H14   C11   C12   C13  	! dihe	  178.3005
+DIHE C10   C11   C12   H15  	! dihe	  179.1668
+DIHE C19   C11   C12   H15  	! dihe	  -62.5612
+DIHE H14   C11   C12   H15  	! dihe	   58.2491
+DIHE C10   C11   C12   H16  	! dihe	   59.0713
+DIHE C19   C11   C12   H16  	! dihe	  177.3432
+DIHE H14   C11   C12   H16  	! dihe	  -61.8464
+DIHE C10   C11   C19   N2   	! dihe	   60.0975
+DIHE C12   C11   C19   N2   	! dihe	  -57.9216
+DIHE H14   C11   C19   N2   	! dihe	 -179.0028
+DIHE C10   C11   C19   H23  	! dihe	  -59.8100
+DIHE C12   C11   C19   H23  	! dihe	 -177.8291
+DIHE H14   C11   C19   H23  	! dihe	   61.0897
+DIHE C10   C11   C19   H24  	! dihe	 -179.5806
+DIHE C12   C11   C19   H24  	! dihe	   62.4003
+DIHE H14   C11   C19   H24  	! dihe	  -58.6808
+DIHE C11   C12   C13   C14  	! dihe	    0.8790
+DIHE H15   C12   C13   C14  	! dihe	  120.9463
+DIHE H16   C12   C13   C14  	! dihe	 -118.9952
+DIHE C11   C12   C13   H17  	! dihe	 -119.1481
+DIHE H15   C12   C13   H17  	! dihe	    0.9192
+DIHE H16   C12   C13   H17  	! dihe	  120.9777
+DIHE C11   C12   C13   H18  	! dihe	  120.7424
+DIHE H15   C12   C13   H18  	! dihe	 -119.1903
+DIHE H16   C12   C13   H18  	! dihe	    0.8682
+DIHE C12   C13   C14   C9   	! dihe	   58.6625
+DIHE H17   C13   C14   C9   	! dihe	  178.6902
+DIHE H18   C13   C14   C9   	! dihe	  -61.2018
+DIHE C12   C13   C14   N2   	! dihe	  -59.0418
+DIHE H17   C13   C14   N2   	! dihe	   60.9859
+DIHE H18   C13   C14   N2   	! dihe	 -178.9061
+DIHE C12   C13   C14   H19  	! dihe	  178.6997
+DIHE H17   C13   C14   H19  	! dihe	  -61.2726
+DIHE H18   C13   C14   H19  	! dihe	   58.8354
+DIHE C9    C14   N2    S1   	! dihe	  143.3068
+DIHE C13   C14   N2    S1   	! dihe	  -97.7120
+DIHE H19   C14   N2    S1   	! dihe	   23.3525
+DIHE C9    C14   N2    C19  	! dihe	  -57.8561
+DIHE C13   C14   N2    C19  	! dihe	   61.1252
+DIHE H19   C14   N2    C19  	! dihe	 -177.8104
+DIHE C14   N2    S1    O3   	! dihe	    1.3427
+DIHE C19   N2    S1    O3   	! dihe	 -156.1365
+DIHE C14   N2    S1    O4   	! dihe	  134.4520
+DIHE C19   N2    S1    O4   	! dihe	  -23.0271
+DIHE C14   N2    S1    C15  	! dihe	 -112.1928
+DIHE C19   N2    S1    C15  	! dihe	   90.3280
+DIHE C14   N2    C19   C11  	! dihe	   -2.3027
+DIHE S1    N2    C19   C11  	! dihe	  156.5718
+DIHE C14   N2    C19   H23  	! dihe	  117.5573
+DIHE S1    N2    C19   H23  	! dihe	  -83.5682
+DIHE C14   N2    C19   H24  	! dihe	 -122.5662
+DIHE S1    N2    C19   H24  	! dihe	   36.3083
+DIHE N2    S1    C15   C16  	! dihe	  156.8193
+DIHE O3    S1    C15   C16  	! dihe	   41.9351
+DIHE O4    S1    C15   C16  	! dihe	  -88.5803
+DIHE N2    S1    C15   C18  	! dihe	  -22.4070
+DIHE O3    S1    C15   C18  	! dihe	 -137.2911
+DIHE O4    S1    C15   C18  	! dihe	   92.1934
+DIHE S1    C15   C16   C17  	! dihe	  179.8819
+DIHE C18   C15   C16   C17  	! dihe	   -0.7944
+DIHE S1    C15   C16   H20  	! dihe	   -0.0885
+DIHE C18   C15   C16   H20  	! dihe	  179.2353
+DIHE S1    C15   C18   S2   	! dihe	 -179.3293
+DIHE C16   C15   C18   S2   	! dihe	    1.4079
+DIHE S1    C15   C18   H22  	! dihe	    0.7074
+DIHE C16   C15   C18   H22  	! dihe	 -178.5554
+DIHE C15   C16   C17   S2   	! dihe	   -0.1946
+DIHE H20   C16   C17   S2   	! dihe	  179.7757
+DIHE C15   C16   C17   H21  	! dihe	  179.7307
+DIHE H20   C16   C17   H21  	! dihe	   -0.2991
+DIHE C16   C17   S2    C18  	! dihe	    0.8300
+DIHE H21   C17   S2    C18  	! dihe	 -179.0953
+DIHE C17   S2    C18   C15  	! dihe	   -1.2672
+DIHE C17   S2    C18   H22  	! dihe	  178.6961
+DIHE C7    C20   C21   C4   	! dihe	   -0.2870
+DIHE H25   C20   C21   C4   	! dihe	  179.7065
+DIHE C7    C20   C21   H26  	! dihe	  179.6771
+DIHE H25   C20   C21   H26  	! dihe	   -0.3294
+
+IMPH C5    C21   C4    O1   
+IMPH C4    C6    C5    H8   
+IMPH C5    C7    C6    H9   
+IMPH C6    C20   C7    N1   
+IMPH C8    C7    N1    H10  
+IMPH C9    N1    C8    O2   
+IMPH C16   C18   C15   S1   
+IMPH C15   C17   C16   H20  
+IMPH C16   H21   C17   S2   
+IMPH C15   H22   C18   S2   
+IMPH C7    C21   C20   H25  
+IMPH C4    C20   C21   H26  
+
+
+

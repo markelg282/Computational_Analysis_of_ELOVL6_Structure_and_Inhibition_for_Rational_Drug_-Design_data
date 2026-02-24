@@ -1,0 +1,112 @@
+title       = FEP Complex
+
+; RUN CONTROL
+;----------------------------------------------------
+define       = -DPOSRES -DPOSRES_FC_BB=50.0 -DPOSRES_FC_SC=0.0 -DPOSRES_FC_LIPID=0.0 -DDIHRES -DDIHRES_FC=0.0
+integrator   = sd            ; stochastic leap-frog integrator
+nsteps       = 250000        ; 2 * 2,500 fs = 5 ps
+dt           = 0.002         ; 2 fs
+nstcomm      = 100           ; frequency for center of mass motion removal
+comm_mode    = linear
+
+; OUTPUT CONTROL
+;----------------------------------------------------
+nstxout                = 0         ; do not save coordinates to .trr
+nstvout                = 0         ; do not save velocities to .trr
+nstfout                = 0         ; do not save forces to .trr
+nstxout-compressed     = 25000     ; xtc compressed trajectory output every 50 ps
+compressed-x-precision = 1000      ; precision with which to write to the compressed trajectory file
+nstlog                 = 10000     ; update log file every 20 ps
+nstenergy              = 10000     ; save energies every 20 ps
+nstcalcenergy          = 100       ; calculate energies every 100 steps (default=100)
+
+; BONDS
+;----------------------------------------------------
+constraint_algorithm   = lincs      ; holonomic constraints
+constraints            = h-bonds    ; constrain H-bonds
+lincs-iter             = 1          ; accuracy of LINCS (1 is default)
+lincs-order            = 6          ; also related to accuracy (4 is default)
+lincs-warnangle        = 30         ; maximum angle that a bond can rotate before LINCS will complain (30 is default)
+continuation           = yes
+
+; NEIGHBOR SEARCHING
+;----------------------------------------------------
+cutoff-scheme         = Verlet ; group or Verlet
+ns-type               = grid   ; search neighboring grid cells
+nstlist               = 10     ; 20 fs (default is 10)
+rlist                 = 0.9    ; short-range neighborlist cutoff (in nm)
+pbc                   = xyz    ; 3D PBC
+
+; ELECTROSTATICS & EWALD
+;----------------------------------------------------
+coulombtype     = PME
+rcoulomb        = 0.9
+fourierspacing  = 0.12
+fourier_nx      = 0
+fourier_ny      = 0
+fourier_nz      = 0
+pme_order       = 4
+ewald_rtol      = 1e-5
+optimize_fft    = yes
+
+; VAN DER WAALS
+;----------------------------------------------------
+vdw-type          = Cut-off                    ; potential switched off at rvdw-switch to reach zero at rvdw
+vdw-modifier      = None
+rvdw              = 0.9                        ; van der Waals cutoff (in nm)
+DispCorr          = EnerPres                   ; apply analytical long range dispersion corrections for Energy and Pressure
+
+; TEMPERATURE COUPLING (Langevin)
+;----------------------------------------------------
+; tcoupl                  = v-rescale
+tc_grps                 = System
+tau_t                   = 1.0
+ref_t                   = 298.15
+
+; PRESSURE COUPLING
+;----------------------------------------------------
+pcoupl                  = C-rescale
+pcoupltype              = isotropic
+tau-p                   = 5.0
+compressibility         = 4.5e-5
+ref-p                   = 1.0
+refcoord-scaling        = com
+
+; FEP
+;----------------------------------------------------
+free_energy              = yes
+init_lambda_state        = 1
+delta_lambda             = 0
+calc_lambda_neighbors    = 1        ; only immediate neighboring windows
+couple-moltype           = UNK      ; name of moleculetype to decouple
+couple-lambda0           = vdw-q    ; only van der Waals interactions
+couple-lambda1           = none     ; turn off everything, in this case only vdW
+couple-intramol          = yes
+; Vectors of lambda specified here
+; Each combination is an index that is retrieved from init_lambda_state for each simulation
+; init_lambda_state        0    1    2     3    4     5    6    7    8    9    10   11   12   13   14   15   16   17   18   19   20   21   22   23   24   26   27   28   29   30   31   32   33   34   35   36   37   38   39   40   41
+vdw-lambdas              = 0.00 0.00 0.000 0.00 0.000 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.05 0.10 0.15 0.20 0.25 0.30 0.35 0.40 0.45 0.50 0.55 0.60 0.65 0.70 0.75 0.80 0.85 0.90 0.95 1.00
+coul-lambdas             = 0.00 0.00 0.000 0.00 0.000 0.00 0.00 0.00 0.00 0.00 0.00 0.10 0.20 0.30 0.40 0.50 0.60 0.70 0.80 0.90 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00
+restraint-lambdas        = 0.00 0.01 0.025 0.05 0.075 0.15 0.20 0.30 0.50 0.75 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00
+; Options for the decoupling
+sc-alpha                 = 0.5
+sc-coul                  = no       ; linear interpolation of Coulomb (none in this case)
+sc-power                 = 1
+sc-sigma                 = 0.3 
+nstdhdl                  = 10
+
+; ABFE RESTRAINTS
+;----------------------------------------------------
+pull                    = yes
+pull-ncoords            = 1                    ; only one reaction coordinate 
+pull-ngroups            = 2                    ; two groups defining one reaction coordinate 
+pull-group1-name        = Binding_Pocket
+pull-group2-name        = UNK
+pull-coord1-type        = umbrella             ; harmonic potential
+pull-coord1-geometry    = distance             ; simple distance increase 
+pull-coord1-dim         = Y Y Y
+pull-coord1-groups      = 1 2
+pull-coord1-start       = yes                  ; define initial COM distance > 0
+pull-coord1-rate        = 0.0                  ; 0.01 nm per ps = 10 nm per ns
+pull-coord1-k           = 0                    ; kJ mol^-1 nm^-2
+pull-coord1-kB          = 15000

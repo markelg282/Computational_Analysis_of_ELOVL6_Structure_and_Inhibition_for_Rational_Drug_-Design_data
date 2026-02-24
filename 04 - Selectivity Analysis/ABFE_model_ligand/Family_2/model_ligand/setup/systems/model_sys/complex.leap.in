@@ -1,0 +1,29 @@
+
+# Load parameters
+loadAmberParams model_ligand/setup/molecules/model_ligand/model_ligand.frcmod
+source leaprc.protein.ff14SB
+source leaprc.gaff2
+source leaprc.water.tip3p
+
+# Load molecules
+elovl6 = loadPdb protein_fixed.pdb
+model_ligand = loadMol2 model_ligand/setup/molecules/model_ligand/model_ligand.gaff.mol2
+
+# Create complex
+complex = combine { elovl6 model_ligand }
+
+# Solvate systems
+solvateBox complex TIP3PBOX 10 iso
+addIonsRand complex K+ 0
+addIonsRand complex Cl- 0
+addIonsRand complex K+ 45
+addIonsRand complex Cl- 45
+
+# Check charge
+check complex
+
+# Save prmtop and inpcrd files
+saveAmberParm complex model_ligand/setup/systems/model_sys/complex.prmtop model_ligand/setup/systems/model_sys/complex.inpcrd
+savePDB complex model_ligand/setup/systems/model_sys/complex.pdb
+
+quit

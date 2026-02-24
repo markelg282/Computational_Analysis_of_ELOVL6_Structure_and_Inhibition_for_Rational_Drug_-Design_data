@@ -1,0 +1,14 @@
+2025-09-24 13:12:19,261 - DEBUG - mpiplus.mpiplus - Running _setup_molecules serially.
+2025-09-24 13:12:44,692 - DEBUG - root - Fixing net charge from 0.0019999999999997242 to -2.3592239273284576e-16
+2025-09-24 13:12:44,694 - DEBUG - mpiplus.mpiplus - Running get_system serially.
+2025-09-24 13:12:44,694 - INFO - yank.pipeline - Setting up the systems for elovl6 and model_ligand using solvent water
+2025-09-24 13:12:44,694 - DEBUG - yank.pipeline - Setting up solvent phase
+2025-09-24 13:12:44,694 - DEBUG - yank.pipeline - Estimating number of water molecules in the box.
+2025-09-24 13:12:44,912 - DEBUG - yank.pipeline - Estimated number of water molecules: 1184
+2025-09-24 13:12:44,912 - DEBUG - root - Adding 3 ions in 1184 water molecules to reach ionic strength of 150 mM
+2025-09-24 13:12:45,014 - DEBUG - yank.pipeline - Setting up complex phase
+2025-09-24 13:12:45,015 - DEBUG - yank.pipeline - Estimating number of water molecules in the box.
+2025-09-24 13:12:51,674 - DEBUG - yank.pipeline - Estimated number of water molecules: 16518
+2025-09-24 13:12:51,674 - DEBUG - root - Adding 45 ions in 16518 water molecules to reach ionic strength of 150 mM
+2025-09-24 13:12:56,678 - DEBUG - mpiplus.mpiplus - Single node: executing <function ExperimentBuilder._generate_yaml at 0x91fd28a29d0>
+2025-09-24 13:12:56,681 - DEBUG - mpiplus.mpiplus - Running _generate_experiment_protocol serially.
