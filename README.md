@@ -1,0 +1,1 @@
+This repository contains a collection of the input files, scripts and structures necessary to reproduce the results presented in the paper "Computational Analysis of ELOVL6 Structure and Inhibition for Rational Drug Design".
